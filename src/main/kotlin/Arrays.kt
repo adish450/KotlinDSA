@@ -38,4 +38,45 @@ fun main(args: Array<String>) {
     for (i in arr8) {
         print("$i ")
     }
+
+    //n-D array
+
+
+    //3D array
+    val matrix1 = Array(5) { Array(6) {IntArray(4) {-2}}}
+
+    for (i in matrix1) {
+        for (j in i) {
+            for (k in j) {
+                print("$k ")
+            }
+            println()
+        }
+    }
+
+    //3D using arrayOf()
+    //1. arrayOf() can't be used with fixed size initialization
+    val matrix2 = arrayOf(arrayOf(
+        arrayOf(8,2,3),
+        arrayOf(2,2,2),
+        arrayOf(4,2,3),
+        arrayOf(5,2,3),
+        arrayOf(8,2,4),
+        arrayOf(5,2,8)))
+
+    for (i in matrix2) {
+        for (j in i) {
+            for (k in j) {
+                print("$k ")
+            }
+            println()
+        }
+    }
+
+    val arr = Array(5){ Array(2) { IntArray(1){0} }}
+    val test = Array(3) {i -> 3 * i} // index -> value at index
+
+    for (i in test) {
+        print("$i ")
+    }
 }
